@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Central Bank Currencies From Sahsa with <3 to Echelon</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial;
+        }
+        thead > tr {
+            background-color: #326FAB;
+        }
+        th, td {
+            color: #343434;
+            padding: 8px 0;
+        }
+        th {
+            color: #ffffff;
+            width: 14.2857%;
+        }
+        tr {
+            border: 1px solid #cecece;
+        }
+        tr:nth-child(2n) {
+            background-color: #dedede;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Числовой код</th>
+            <th>Буквенный код</th>
+            <th>Номинал</th>
+            <th>Имя</th>
+            <th>Значение</th>
+            <th>Предыдущее значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range .Currencies}}
+            <tr>
+                <td>{{.ID}}</td>
+                <td>{{.NumCode}}</td>
+                <td>{{.CharCode}}</td>
+                <td>{{.Nominal}}</td>
+                <td>{{.Name}}</td>
+                <td>{{.Value}}</td>
+                <td>{{.Previous}}</td>
+            </tr>
+        {{end}}
+    </tbody>
+</table>
+
+</body>
+</html>
